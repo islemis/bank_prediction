@@ -17,8 +17,8 @@ app.add_middleware(
 # ======================
 # Charger le modèle et le préprocesseur
 # ======================
-model = load_model("../models/nn_model.keras")  # ton modèle Keras
-preprocessor = joblib.load("../models/preprocessor.pkl")  # préprocesseur enregistré
+model = load_model("models/nn_model.keras")  # ton modèle Keras
+preprocessor = joblib.load("models/preprocessor.pkl")  # préprocesseur enregistré
 
 # ======================
 # Créer l'API FastAPI
