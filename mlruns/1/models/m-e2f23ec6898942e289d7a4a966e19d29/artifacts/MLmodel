@@ -1,0 +1,22 @@
+artifact_path: file:C:/bank-prediction/mlruns/1/models/m-e2f23ec6898942e289d7a4a966e19d29/artifacts
+flavors:
+  python_function:
+    data: data
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.tensorflow
+    python_version: 3.13.2
+  tensorflow:
+    code: null
+    data: data
+    keras_version: 2.21.0
+    model_type: keras
+    save_format: tf
+mlflow_version: 3.10.1
+model_id: m-e2f23ec6898942e289d7a4a966e19d29
+model_size_bytes: 33424
+model_uuid: m-e2f23ec6898942e289d7a4a966e19d29
+prompts: null
+run_id: b73bf5609bd44c2596c3b973c1083760
+utc_time_created: '2026-03-30 19:32:33.276777'

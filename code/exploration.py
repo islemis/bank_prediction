@@ -14,16 +14,12 @@ def run_advanced_eda(file_path="data/bank-full.csv"):
     # ── Load data ──────────────────────────────────────────────────────────────
     df = pd.read_csv(file_path, sep=";")
  
-    print("--- Dataset Shape ---")
     print(df.shape)
  
-    print("\n--- Dataset Info ---")
     df.info()
  
-    print("\n--- First 5 rows ---")
     print(df.head())
  
-    print("\n--- Target Distribution ---")
     print(df['y'].value_counts())
     print(df['y'].value_counts(normalize=True) * 100)
  
