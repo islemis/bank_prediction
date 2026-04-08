@@ -2,14 +2,14 @@ name: Main CI Bank Prediction
 
 on:
   push:
-    [cite_start]branches: [ "master" ] # Le déclencheur (Trigger) [cite: 22, 23, 31]
+    branches: [ "master" ] # Le déclencheur (Trigger) [cite: 22, 23, 31]
 
 jobs:
   # Job 1 : Analyse statique (Linting) [cite: 33]
   lint-python:
-    [cite_start]runs-on: ubuntu-latest # Le Runner [cite: 18, 36]
+    runs-on: ubuntu-latest # Le Runner [cite: 18, 36]
     steps:
-      - [cite_start]uses: actions/checkout@v4 # Étape 1 : Récupérer le code [cite: 38]
+      - uses: actions/checkout@v4 # Étape 1 : Récupérer le code [cite: 38]
       
       - name: Set up Python 3.13
         uses: actions/setup-python@v5
@@ -26,7 +26,7 @@ jobs:
 
   # Job 2 : Vérification de l'intégrité Docker [cite: 49]
   build-docker-backend:
-    [cite_start]needs: lint-python # Stratégie "Fail-Fast" : dépend du succès du linting [cite: 53, 62, 63]
+    needs: lint-python # Stratégie "Fail-Fast" : dépend du succès du linting [cite: 53, 62, 63]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
