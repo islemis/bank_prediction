@@ -11,10 +11,10 @@ jobs:
     steps:
       - [cite_start]uses: actions/checkout@v4 # Étape 1 : Récupérer le code [cite: 38]
       
-      - name: Set up Python 3.9
+      - name: Set up Python 3.13
         uses: actions/setup-python@v5
         with:
-          python-version: "3.9"
+          python-version: "3.13"
 
       - name: Install flake8
         run: pip install flake8
@@ -22,7 +22,7 @@ jobs:
       - name: Lint with flake8
         # Scanne le dossier code/ pour les erreurs de syntaxe [cite: 46, 47]
         run: |
-          flake8 code/ --count --select=E9,F63,F7,F82 --show-source --statistics
+          flake8 backend_app/ --count --select=E9,F63,F7,F82 --show-source --statistics
 
   # Job 2 : Vérification de l'intégrité Docker [cite: 49]
   build-docker-backend:
